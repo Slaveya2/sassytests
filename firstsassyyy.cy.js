@@ -13,19 +13,27 @@ it.only(`test`, function () {
     cy.get('.confirm-wrap > .abs-tooltip > .spectrum-Button').click()
     cy.get('#add-column-button > .icon').click()
     cy.get('input[type="text"]').clear();
+
+
+    //add First name 
     cy.get('.spectrum-Textfield.svelte-wy7fqv').first().type('First Name');
-
-
-    // add a user
     cy.get('.back-to-apps > .icon')
-     cy.get(':nth-child(2) > .spectrum-Tabs-itemLabel')
+    cy.get(':nth-child(2) > .spectrum-Tabs-itemLabel')
+    cy.get('.back-to-apps > .icon')
+    cy.get(':nth-child(2) > .spectrum-Tabs-itemLabel')
+    cy.get(':nth-child(2) > .spectrum-Button> .svelte-s9bbw').click({ force: true })
+    cy.get('.back-to-apps > .icon').click()
 
-//      cy.get('.spectrum-Button.spectrum-Button--sizeM.svelte-s9bbw.spectrum-Button--cta.new-styles').click()
-//       cy.get('button').as('Save').click()
 
-cy.get(':nth-child(2) > .spectrum-Button> .svelte-s9bbw').click({ force: true })
-cy.get('.back-to-apps > .icon').click()
-cy.get('.spectrum-Body spectrum-Body--sizeM').click()
+
+    // add Users 
+   // cy.get('"class = spectrum-Icon spectrum-Icon--sizeS svelte-1hchcjl hoverable"]').click()
+
+    
+     //cy.get(':nth-child(2) > .spectrum-Tabs-itemLabel').click()
+    // cy.get('.spectrum-ButtonGroup > :nth-child(1) > .spectrum-Button').click()
+    // cy.get('.spectrum-InputGroup > .spectrum-Textfield > .spectrum-Textfield-input').type(`mishosikam@gmail.com`)
+
 
 
 })
